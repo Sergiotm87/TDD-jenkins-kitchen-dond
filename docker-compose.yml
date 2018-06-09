@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  jenkins:
+    image: kammin/jenkins_kitchen_dond:0.5
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./volumes/jenkins/:/var/jenkins_home/
+    networks:
+      test_driven_development: {}
+
+networks:
+  test_driven_development:
+    driver: bridge
+    name: test_driven_development

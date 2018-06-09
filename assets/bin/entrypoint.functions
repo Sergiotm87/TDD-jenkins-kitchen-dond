@@ -1,0 +1,11 @@
+#!/bin/bash
+set -x
+
+function remove-ipv6-from-hostsfile() {
+
+  sed -e '1p' -e '$!d' /etc/hosts > /tmp/hosts
+  sudo cp -a /tmp/hosts /etc/hosts
+
+}
+
+#function start-jenkins () {}
