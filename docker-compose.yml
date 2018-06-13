@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   jenkins:
-    image: kammin/jenkins_kitchen_dond:0.5
+    image: kammin/jenkins_kitchen_dond:0.6
     privileged: true
     restart: unless-stopped
     ports:
@@ -10,6 +10,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./volumes/jenkins/:/var/jenkins_home/
+      - ./volumes/projects/:/opt/projects/
     networks:
       test_driven_development: {}
 
