@@ -81,6 +81,8 @@ RUN usermod -a -G docker jenkins
 RUN echo "jenkins ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/jenkins && \
     chmod 0440 /etc/sudoers.d/jenkins
 
+RUN mkdir /opt/projects
+
 # container runs in privileged mode by non-root user
 USER jenkins
 
