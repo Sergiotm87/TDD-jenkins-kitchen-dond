@@ -429,10 +429,15 @@ Nuevas funcionalidades que añaden mayor complejidad al proyecto o que no se han
 ## Referencias
 
 test-kitchen    https://kitchen.ci/ https://docs.chef.io/kitchen.html https://github.com/test-kitchen/test-kitchen
+
 jenkins         https://jenkins.io/ https://github.com/jenkinsci/jenkins
+
 docker          https://www.docker.com/
+
 ansible         https://www.ansible.com/
+
 inspec          https://www.inspec.io/ https://github.com/inspec/inspec
+
 cookiecutter    https://github.com/audreyr/cookiecutter
 
 
