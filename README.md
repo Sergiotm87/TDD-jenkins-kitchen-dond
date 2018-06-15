@@ -103,16 +103,21 @@ Primero hay que levantar el escenario compuesto por dos repositorios. Los requis
 
 Pasos a dar para realizar una prueba
 
+```
+git clone https://github.com/k4mmin/TDD-jenkins-kitchen-dond.git
+```
+
 Clonar el repositorio TDD, dentro de este instalar los requisitos en un entorno virtual python y levantar el contenedor con la aplicación con los siguientes comandos:
 
 ```
+virtualenv venv
 source venv/bin/activate
 ```
 
 Activa el entorno virtual de python para instalar los requisitos de manera local.
 
 ```
-pip install -f requirements.txt
+pip install -r requirements.txt
 ```
 
 Instala los requisitos python. Gracias al entorno virtual podemos hacerlo como usuario no privilegiado y sin que interfiera con otros paquetes instalados en el equipo permitiendo además usar diferentes versiones en cada caso.
