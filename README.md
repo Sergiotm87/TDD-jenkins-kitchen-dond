@@ -365,9 +365,9 @@ Cambios conocidos que deben ser arreglados o funcionalidades no terminadas:
 
 - Tagear las imágenes docker construidas cuando se cumplen los test o destruirlas si no se pasan.
 
-- Recrear la imagen docker con los permisos necesarios (por ejemplo el directorio con las gemas ruby) para que el usuario jenkins no necesite ejecutar los test con sudo.
+- Recrear la imagen docker con los permisos necesarios (por ejemplo el directorio con las gemas ruby) para que el usuario jenkins no necesite ejecutar los test con sudo. (nota: otra opción de ser necesario correr en 'privileged' es [remapear](https://docs.docker.com/engine/security/userns-remap/) el usuario root a otro usuario en el host )
 
-- Realizar builds automáticas de la imagen en [docker-hub](https://hub.docker.com/)
+- Realizar builds automáticas de la imagen en [docker-hub](https://hub.docker.com/) (nota: añadir webhook para usar travis [ejemplo](https://medium.com/mobileforgood/coding-tips-patterns-for-continuous-integration-with-docker-on-travis-ci-9cedb8348a62))
 
 - Estudiar el problema con el uso de ipv6 dentro del contenedor a la hora de lanzar kitchen (en este momento se arregla con el script del entrypoint y se utiliza ipv4) para que pueda usarse ipv6 (nota: repasar el fichero /etc/gai.conf).
 
