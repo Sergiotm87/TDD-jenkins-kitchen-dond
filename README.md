@@ -105,6 +105,7 @@ Pasos a dar para realizar una prueba
 
 ```
 git clone https://github.com/k4mmin/TDD-jenkins-kitchen-dond.git
+cd TDD-jenkins-kitchen-dond.git
 ```
 
 Clonar el repositorio TDD, dentro de este instalar los requisitos en un entorno virtual python y levantar el contenedor con la aplicación con los siguientes comandos:
@@ -120,8 +121,7 @@ Activa el entorno virtual de python para instalar los requisitos de manera local
 pip install -r requirements.txt
 ```
 
-Instala los requisitos python. Gracias al entorno virtual podemos hacerlo como usuario no privilegiado y sin que interfiera con otros paquetes instalados en el equipo permitiendo además usar diferentes versiones en cada caso.
-
+Instala los requisitos python. Gracias al entorno virtual podemos instalar las dependencias como usuario no privilegiado y sin que interfiera con otros paquetes instalados en el equipo.
 
 ```
 make build
@@ -130,16 +130,16 @@ make build
 Crea la imagen docker con los parámetros establecidos en el fichero Makefile. El nombre de la imagen debe coincidir con la indicada en el fichero docker-compose.
 
 ```
+cookiecutter https://github.com/k4mmin/cookiecutter-kitchen-ansible -o volumes/projects/
+```
+
+Obtiene la plantilla de ese repositorio y rellena un formulario por consola que deja preparado el escenario sobre el que correr las pruebas.
+
+```
 docker-compose up -d
 ```
 
 Levanta un contenedor a partir de la imagen anterior con una configuración específica (variables de entorno, puertos mapeados del equipo anfitrión, red a utilizar y volúmenes persistentes a utilizar ). Una vez desplegado el contenedor podemos comprobar su estado con el comando 'docker ps' para comprobar si está disponible.
-
-```
-cookiecutter https://github.com/k4mmin/cookiecutter-kitchen-ansible -o ./volumes/projects/
-```
-
-Obtiene la plantilla de ese repositorio y rellena un formulario por consola que deja preparado el escenario sobre el que correr las pruebas.
 
 El último paso es entrar en jenkins y correr el escenario.
 
