@@ -13,7 +13,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /opt/{{ project_name }}
+      <command>cd /opt/projects/{{ project_name }}
 sudo bundle install --path /var/lib/gems/2.3.0/cache
 sudo kitchen test</command>
     </hudson.tasks.Shell>
