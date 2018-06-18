@@ -7,14 +7,9 @@ La idea principal de este proyecto es crear una herramienta para facilitar el de
 ## Contenido
 
 - [Descripción](#descripción)
-- [Conceptos y herramientas](#conceptos)
-  * [Infrastructure as Code](#infrastructure-as-Code)
+- [Conceptos y herramientas](#conceptos-y-herramientas)
+  * [Infrastructure as Code](#infrastructure-as-code)
   * [Test Driven Development](#test-driven-development)
-  * [Test-kitchen](#test-kitchen)
-  * [Docker](#docker)
-  * [Ansible](#ansible)
-  * [Inspec](#inspec)
-  * [Cookiecutter](#cookiecutter)
 - [Uso](#uso)
 - [Desarrollo y pruebas](#desarrollo-y-pruebas)
 - [Conclusiones](#conclusiones)
