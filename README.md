@@ -6,20 +6,20 @@ La idea principal de este proyecto es crear una herramienta para facilitar el de
 
 ## Contenido
 
-- [Descripción](#Descripción)
-- [Conceptos y herramientas](#Conceptos)
-  * [Infrastructure as Code](#Infrastructure_as_Code)
-  * [Test Driven Development](#Test_Driven_Development)
-  * [Test-kitchen](#Test-kitchen)
-  * [Docker](#Docker)
-  * [Ansible](#Ansible)
-  * [Inspec](#Inspec)
-  * [Cookiecutter](#Cookiecutter)
-- [Uso](#Uso)
-- [Desarrollo y pruebas](#Desarrollo_y_pruebas)
-- [Conclusiones](#Conclusiones)
-- [Trabajo futuro](#Trabajo_futuro)
-- [Referencias](#Referencias)
+- [Descripción](#descripción)
+- [Conceptos y herramientas](#conceptos)
+  * [Infrastructure as Code](#infrastructure-as-Code)
+  * [Test Driven Development](#test-driven-development)
+  * [Test-kitchen](#test-kitchen)
+  * [Docker](#docker)
+  * [Ansible](#ansible)
+  * [Inspec](#inspec)
+  * [Cookiecutter](#cookiecutter)
+- [Uso](#uso)
+- [Desarrollo y pruebas](#desarrollo-y-pruebas)
+- [Conclusiones](#conclusiones)
+- [Trabajo futuro](#trabajo-futuro)
+- [Referencias](#referencias)
 
 ### Descripción
 
@@ -38,7 +38,7 @@ El proceso completo lo forman las pruebas en el entorno local y el despliegue de
 
 ### Conceptos y herramientas
 
-#### Infrastructure_as_Code
+#### Infrastructure as Code
 
 La infraestructura como código es un concepto que se puede resumir en agilizar procesos repetitivos de manera eficiente mediante código fuente, destacando como algunas de sus caractarísticas:
 
@@ -48,7 +48,7 @@ La infraestructura como código es un concepto que se puede resumir en agilizar 
 
 > “If you automate a mess, you get an automated mess.” (Rod Michael)
 
-#### Test_Driven_Development
+#### Test Driven Development
 
 El desarrollo basado en pruebas es una práctica muy usada en el desarrollo de software que intenta reducir el tiempo y la complejidad de los ciclos de desarrollo mediante la iteración del proceso de desarrollo de código y la ejecución de tests.
 
@@ -62,7 +62,7 @@ En el caso de las infraestructuras debemos tener en cuenta que las tecnologías 
 
 >“Bad programmers have all the answers. Good testers have all the questions.” (Gil Zilberfeld)
 
-#### Test-kitchen
+#### Test kitchen
 
 Software desarrollado por el equipo de chef en lenguaje ruby que permite testear infraestructuras en diferentes tipos de plataformas. Mediante un fichero de configuración en formato yaml levanta una máquina virtual y ejecutar sobre ella los test, al terminar devuelve el resultado y destruye la máquina virtual lo que lo convierte en una herramienta perfecta para entornos de integración continua de aprovisionamiento de infraestructuras.
 
@@ -143,7 +143,7 @@ Levanta un contenedor a partir de la imagen anterior con una configuración espe
 
 El último paso es entrar en jenkins y correr el escenario.
 
-## Desarrollo_y_pruebas
+## Desarrollo y pruebas
 
 El primer paso de este proyecto ha sido estudiar las herramientas de software libre para la ejecución de tests sobre infraestructuras. La primera prueba completa realizada ha sido con vagrant y el plugin de serversec ([link](https://github.com/vvchik/vagrant-serverspec)), un escenario muy sencillo de reproducir para conocer alguna herramienta de tests usando un rol de ansible-galaxy.
 
@@ -356,7 +356,7 @@ Otras herramientas sobre las que he realizado pequeñas pruebas tienen aspectos 
 
 Finalmente no he podido realizar un desarrollo de infraestructura usando la herramienta terminada con un ciclo definido de desarrollo basado en diferentes tipos de tests y funcionalidades. Seguiré desarrollando estos aspectos en el futuro con una hoja de ruta bastante clara.
 
-## Trabajo_futuro
+## Trabajo futuro
 
 Durante el desarrollo del proyecto he encontrado cambios que serán implementados próximamente y otras funcionalidades que serán estudiadas para aprender sobre las herramientas asociadas.
 
