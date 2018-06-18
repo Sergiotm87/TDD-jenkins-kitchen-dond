@@ -412,6 +412,7 @@ if __name__ == '__main__':
     configure_role()
 ```
 
+- Crear imagen de prueba con [tini](https://github.com/krallin/tini/issues/8)(proceso init),[supervisord](http://supervisord.org/introduction.html)(control de procesos) y entrypoint.sh para poder reiniciar jenkins. 
 
 - Comprobar la ventaja de usar una construcción 'multi-stage' para usar una imagen base más ligera que contenga por un lado jenkins y a continuación el actual dockerfile ([ejemplo](https://docs.docker.com/develop/develop-images/multistage-build/)).
 
