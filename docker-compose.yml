@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   jenkins:
-    image: kammin/jenkins_kitchen_dond:0.6
+    image: kammin/jenkins_kitchen_dond:0.8
     privileged: true
     restart: unless-stopped
     ports:
