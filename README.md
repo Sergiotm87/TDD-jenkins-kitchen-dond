@@ -375,7 +375,7 @@ Funcionalidades que pueden ser mejoradas o que se han estudiado previamente y se
 
 - Realizar los pasos necesarios para que pueda lanzarse el playbook en un equipo remoto una vez pasados los test por ejemplo en una instancia de Amzon EC2 (tras el cambio de vagrant a docker ha pasado de ser una prioridad a una funcionalidad extra, ahora se obtiene una imagen que puede ser usada directamente)(nota: probar la gema [kitchen-ec2](https://github.com/test-kitchen/kitchen-ec2)).
 
-- Realizar test funcionales sobre la imagen generada (ej selenium sobre aplicación web) y estudiar como realizarlos desde jenkins.
+- Realizar test funcionales sobre la imagen generada (ej selenium sobre aplicación web) y estudiar como realizarlos desde jenkins. (nota: probar [Pipeline Plugin](https://wiki.jenkins.io/display/JENKINS/Pipeline+Plugin)).
 
 - Traducir la documentación del repositorio al ingles para que sea más accesible a la comunidad.
 
@@ -412,7 +412,7 @@ if __name__ == '__main__':
     configure_role()
 ```
 
-- Crear imagen de prueba con [tini](https://github.com/krallin/tini/issues/8)(proceso init),[supervisord](http://supervisord.org/introduction.html)(control de procesos) y entrypoint.sh para poder reiniciar jenkins. 
+- Crear imagen de prueba con [tini](https://github.com/krallin/tini/issues/8)(proceso init),[supervisord](http://supervisord.org/introduction.html)(control de procesos) y entrypoint.sh para poder reiniciar jenkins.
 
 - Comprobar la ventaja de usar una construcción 'multi-stage' para usar una imagen base más ligera que contenga por un lado jenkins y a continuación el actual dockerfile ([ejemplo](https://docs.docker.com/develop/develop-images/multistage-build/)).
 
