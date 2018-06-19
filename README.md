@@ -100,7 +100,7 @@ Pasos a dar para realizar una prueba
 
 ```
 git clone https://github.com/k4mmin/TDD-jenkins-kitchen-dond.git
-cd TDD-jenkins-kitchen-dond.git
+cd TDD-jenkins-kitchen-dond
 ```
 
 Clonar el repositorio TDD, dentro de este instalar los requisitos en un entorno virtual python y levantar el contenedor con la aplicación con los siguientes comandos:
