@@ -88,8 +88,10 @@ USER jenkins
 
 ADD assets /assets
 
-COPY assets/plugins/plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+# COPY assets/plugins/plugins.txt /usr/share/jenkins/plugins.txt
+# RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+RUN /usr/local/bin/install-plugins.sh ansicolor postbuild-task
+
 
 #!!!check this in next build (are they all needed?)
 VOLUME [ "/sys/fs/cgroup", "/run", "/run/lock" ]
