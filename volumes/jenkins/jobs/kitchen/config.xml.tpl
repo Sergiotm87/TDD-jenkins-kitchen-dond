@@ -13,16 +13,22 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /opt/projects/{{ project_name }}
+      <command>#!/bin/bash
+cd /opt/projects/{{ project_name }}
 # Disable exit on non 0
 #set +e
-#Do something. If something fails with exit!=0 the script continues anyway
-# Enable exit on non 0
-#set -e
-# Do something. If something fails with exit!=0 the script stops
 sudo bundle install --path /var/lib/gems/2.3.0/cache
-#delete docker image and container if test fails
-sudo kitchen test || docker rm -f $(docker ps -lq) &amp;&amp; docker rmi $(docker images | awk NR==2&apos;{print $3}&apos;) &amp;&amp; exit 1</command>
+sudo kitchen test
+if [ $? -ne 0 ]
+then
+	#delete docker image and container if test fails
+	docker rm -f $(docker ps -lq)
+    docker rmi $(docker images | awk NR==2&apos;{print $3}&apos;)
+    exit -1
+fi
+set -e
+exit 0</command>
+      <unstableReturn>1</unstableReturn>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -36,7 +42,7 @@ sudo kitchen test || docker rm -f $(docker ps -lq) &amp;&amp; docker rmi $(docke
             </hudson.plugins.postbuildtask.LogProperties>
           </logTexts>
           <EscalateStatus>false</EscalateStatus>
-          <RunIfJobSuccessful>false</RunIfJobSuccessful>
+          <RunIfJobSuccessful>true</RunIfJobSuccessful>
           <script>#!/bin/bash&#xd;
 #tag image if build is ok&#xd;
 docker tag $(docker images | awk NR==2&apos;{print $3}&apos;) kammin/{{ project_name }}:latest</script>
